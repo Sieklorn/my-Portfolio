@@ -761,9 +761,19 @@ a.btn:nth-child(2)::before{
 .progress-line.bootstrap span{
     width: 60%;
 }
+.progress-line.tailwindcss span{
+    width: 60%;
+}
 .progress-line.javascript span{
     width: 50%;
 }
+.progress-line.photoshop span{
+    width: 50%;
+}
+.progress-line.ai span{
+    width: 50%;
+}
+
 .progress-line span::after{
     position: absolute;
     padding: 1px 8px;
@@ -801,7 +811,16 @@ a.btn:nth-child(2)::before{
 .progress-line.bootstrap span::after{
     content: "60%";
 }
+.progress-line.tailwindcss span::after{
+    content: "60%";
+}
 .progress-line.javascript span::after{
+    content: "50%";
+}
+.progress-line.photoshop span::after{
+    content: "50%";
+}
+.progress-line.ai span::after{
     content: "50%";
 }
 
@@ -818,6 +837,7 @@ a.btn:nth-child(2)::before{
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: flex-start;
+    margin-top: 80px;
 }
 .circle-bars .circle-bar{
     width: 50%;
@@ -1156,6 +1176,7 @@ footer{
     position: relative;
 }
 .social-icons-footer a{
+    position: relative;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -1168,6 +1189,26 @@ footer{
     border: 2px solid var(--clr-primary-a20);
     background: var(--clr-surface-a20);
     border-radius: 50%;
+    overflow: hidden;
+    z-index: 1;
+}
+.social-icons-footer a:hover{
+    color: var(--clr-surface-a10);
+    box-shadow: 0px 0px 40px 3px var(--clr-primary-a0);
+}
+.social-icons-footer a::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: var(--clr-primary-a10);
+    z-index: -1;
+    transition: all 0.4s ease-in-out;
+}
+.social-icons-footer a:hover::before{
+    width: 100%;
 }
 .social-icons-footer::before{
     content: "";
@@ -1377,6 +1418,11 @@ footer{
         grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
         gap: 3rem;
     }
+
+    /* Professional Skill----------------- */
+    .circle-bars{
+        margin-top: 0;
+    }
 }
 
 /* Animation-------------------------------------- */
@@ -1420,14 +1466,14 @@ footer{
         opacity: 1;
     }
 }
-@keyframes threeD {
+/* @keyframes threeD {
     to{
         transform: rotateY(360deg);
     }
     from{
         transform: rotateY(-360deg);
     }
-}
+} */
 
 /* Animation------------------ */
 .autoShow{
