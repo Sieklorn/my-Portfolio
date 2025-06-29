@@ -69,6 +69,22 @@
 //     navlist.classList.remove("open");
 // }
 
+const links = document.querySelectorAll(".nav-link");
+links.forEach(link =>{
+    const underline = document.createElement('span');
+    link.appendChild(underline);
+
+    link.addEventListener("mouseenter",()=>{
+        underline.style.width = "100%";
+    });
+
+    link.onmouseleave = ()=>{
+        underline.style.width = "0";
+    };
+
+});
+
+
 const header = document.querySelector("header");
 window.addEventListener("scroll",function(){
     header.classList.toggle("sticky",window.scrollY > 50)
@@ -168,10 +184,41 @@ icon.addEventListener("click",function(){
 // toggle.onclick = () => {
 //     body.classList.toggle("dark-theme");
 
-//     // ផ្លាស់ប្តូររូបគំនូស icon
 //     if (body.classList.contains("dark-theme")) {
 //         icon.classList.replace("bx-sun", "bx-moon-star");
 //     } else {
 //         icon.classList.replace("bx-moon-star", "bx-sun");
 //     }
 // }
+
+
+const portWrapper = document.querySelectorAll(".port-box");
+// const portContent = document.querySelectorAll(".port-content");
+
+portWrapper.forEach(wrapper=>{
+    const portContent = wrapper.querySelector(".port-content");
+    wrapper.addEventListener("mouseenter",function(){
+        portContent.style.height = "100%";
+    })
+
+    wrapper.onmouseleave = ()=>{
+        portContent.style.height = "0";
+    }
+})
+
+
+
+// Graphic Design Page
+// const boxes = document.querySelectorAll(".post-boxs");
+// const btn = document.querySelector(".showMore");
+// let show = 3;
+// boxes.forEach((box, index) =>{
+//     if(index < show){
+//         box.classList.add("visible");
+//     }
+// });
+
+// btn.addEventListener("click",function(){
+//     boxes.forEach(box => box.classList.add("visible"));
+//     btn.style.display = "none";
+// })
