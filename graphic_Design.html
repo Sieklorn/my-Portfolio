@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphic Design Project</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <link href='https://cdn.boxicons.com/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
+     <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body>
+    <!-- Header ---------------------------->
+    <header>
+        <div class="logo">
+            <img src="image/Brand.svg" alt="">
+            <!-- <span>Sieklorn</span> -->
+        </div>
+
+        <a href="index.html" target="_self" class="nav-link active">
+            <i class='bxr bx-chevrons-left back'></i> 
+            Back
+        </a> 
+
+         <div class="menu" id="menu">  
+        </div>
+
+        <div class="toggle">
+            <i class="bxr bx-sun"></i>
+            <i class="bxr bx-moon-star"></i>
+        </div>
+    </header>
+    <!-- Section---------------- -->
+    <section class="poster-page">
+        <div class="main-text">
+            <span>My Project</span>
+            <h2>Posters</h2>
+        </div>
+        <div class="collection">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="content swiper-slide">
+                        <img src="image/GreanTea.jpg" alt="">
+                    </div>
+                    <div class="content swiper-slide">
+                        <img src="image/Oranges1.jpg" alt="">
+                    </div>
+                    <div class="content swiper-slide">
+                        <img src="image/Child_labour.jpg" alt="">
+                    </div>
+                    <div class="content swiper-slide">
+                        <img src="image/Father-day.jpg" alt="">
+                    </div>
+                    <div class="content swiper-slide">
+                        <img src="image/PhreasVihea.jpg" alt="">
+                    </div>
+                    <div class="content swiper-slide">
+                        <img src="image/samdachyeay.jpg" alt="">
+                    </div>
+                    <div class="content swiper-slide">
+                        <img src="image/Oranges2.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="slider-control">
+                    <!-- <div class="swiper-button-prev slider-arrow">
+                        <ion-icon name="arrow-back-outline"></ion-icon>
+                    </div>
+                    <div class="swiper-button-next slider-arrow">
+                        <ion-icon name="arrow-forward-outline"></ion-icon>
+                    </div> -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="post-image">
+            <div class="post-boxs" style="grid-area: box-1;">
+                <img src="image/GreanTea.jpg" alt="">
+            </div>
+            <div class="post-boxs" style="grid-area: box-2;">
+                <img src="image/Oranges1.jpg" alt="">
+            </div>
+            <div class="post-boxs" style="grid-area: box-3;">
+                <img src="image/Child_labour.jpg" alt="">
+            </div>
+            <div class="post-boxs" style="grid-area: box-4;">
+                <img src="image/Father-day.jpg" alt="">
+            </div>
+            <div class="post-boxs" style="grid-area: box-5;">
+                <img src="image/PhreasVihea.jpg" alt="">
+            </div>
+            <div class="post-boxs" style="grid-area: box-6;">
+                <img src="image/samdachyeay.jpg" alt="">
+            </div>
+            <div class="post-boxs" style="grid-area: box-7;">
+                <img src="image/Oranges2.jpg" alt="">
+            </div> 
+        </div> -->
+    </section>
+    <!-- Footer Section--------------------- -->
+    
+    <!-- <div class="btn-show">
+        <button class="showMore">Show More</button>
+    </div> -->
+
+    
+    <Footer class="footer">
+        <div class="footer-info">
+            <div class="social-icons-footer">
+                <a href="https://www.facebook.com/share/1CMpMQwcdG/" target="_blank"><i class="bxl bx-facebook i1"></i></a>
+                <a href="https://t.me/KSL19" target="_blank"><i class="bxl bx-telegram i2"></i></a>
+                <a href="https://www.instagram.com/sieklorn?igsh=ZDlzem80dXhncW0w" target="_blank"><i class="bxl bx-instagram i3"></i></a>
+                <a href="https://x.com/sieklorn?t=7dbu7bqBj8cYC21eVGCT8A&s=35" target="_blank"><i class="bxl bx-twitter-x i4"></i></a>
+            </div>
+            <div class="copy-right">
+                <p>Copyright ©2025 keosieklorn  K.S.L. All rights reserved.</p>
+            </div>
+        </div>
+    </Footer>
+   
+    <!-- Swiper JS -->
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>   
+        var swiper = new Swiper(".mySwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        loop:true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+            rotate: 0,
+            stretch: 0,
+            depth: 150,
+            modifier: 2.5,
+            slideShadows: true,
+        },
+        autoplay:{
+
+            delay:3000,
+            disableOnInteraction:false,
+        },
+        pagination:{
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation:{
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        }
+
+        });
+    </script>
+    
+</body>
+</html>
