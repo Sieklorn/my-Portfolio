@@ -208,17 +208,22 @@ portWrapper.forEach(wrapper=>{
 
 
 
-// Graphic Design Page
-// const boxes = document.querySelectorAll(".post-boxs");
-// const btn = document.querySelector(".showMore");
-// let show = 3;
-// boxes.forEach((box, index) =>{
-//     if(index < show){
-//         box.classList.add("visible");
-//     }
-// });
 
-// btn.addEventListener("click",function(){
-//     boxes.forEach(box => box.classList.add("visible"));
-//     btn.style.display = "none";
-// })
+const boxes = document.querySelectorAll(".post-boxs");
+const btn = document.querySelector(".showMore");
+let isVisible;
+
+btn.addEventListener("click", function(){
+    isVisible = !isVisible;
+
+    boxes.forEach(box =>{
+        if(isVisible){
+            box.classList.add("visible");
+        }
+        else{
+            box.classList.remove("visible");
+        }
+    })
+
+    btn.textContent = isVisible ? "Show Less" : "Show More";
+})

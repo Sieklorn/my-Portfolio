@@ -645,6 +645,14 @@ a.btn:nth-child(2)::before{
 }
 
 /* About Right Side------------------------------ */
+
+/* Button Show more ------ */
+.showMore{
+    width: 150px;
+    height: 45px;
+    display: flex;
+}
+
 .about-right-side{
     margin-left: 20px;
 }
@@ -1686,48 +1694,53 @@ a .back{
     justify-content: center;
     align-items: center;
 }
-/* .post-image{
+
+
+.post-image{
     display: grid;
     justify-content: center;
     grid-template-columns: auto;
     grid-template-rows: auto; 
     gap: 1rem;
     grid-template-areas: 
-    "box-1 box-2 box-3"
-    "box-4 box-5 box-6"
-    "box-7 box-7 box-7";   
-} */
-/* .post-boxs{ 
+    "box-1 box-2 box-5" 
+    "box-3 box-4 box-6";
+}
+.post-boxs{ 
     flex: 1 1 18rem;
     align-items: center;
     justify-content: center;
-} */
-/* .post-boxs img{
+    display: none;
+}
+.post-boxs.visible{
+    display: block;
+}
+.post-boxs img{
     width: 100%;
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     object-fit: cover;
-} */
+}
 
-/* @media (max-width: 1290px) { */
-    /* .graphic-section{
+@media (max-width: 1290px) {
+    .graphic-section{
         padding: 50px 5%;
-    } */
-    /* .post-image{
+    }
+    .post-image{
         display: grid;
         justify-content: center;
         grid-template-columns: auto;
-        grid-template-rows: auto; 
+        grid-template-rows:auto; 
         gap: 1rem;
         grid-template-areas: 
-        "box-2 box-2 box-1 box-3"
-        "box-2 box-2 box-4 box-5"
-        "box-6 box-6 box-7 box-7";  
+        "box-2 box-1"
+        "box-3 box-4"
+        "box-5 box-6";  
     } 
-} */
-/* @media (max-width) {
+}
+@media (max-width) {
     .post-image{
     display: flex;
     flex-wrap: wrap;
@@ -1735,9 +1748,9 @@ a .back{
     justify-content: center;
     gap: 1rem;
     }
-} */
+}
 
-/* @media (max-width: 950px) {
+@media (max-width: 950px) {
     .post-image{
         display: grid;
         justify-content: center;
@@ -1745,9 +1758,10 @@ a .back{
         grid-template-rows: auto; 
         gap: 1rem;
         grid-template-areas: 
-        "box-1 box-2 box-3 box-3"
-        "box-6 box-7 box-3 box-3"
-        "box-4 box-4 box-5 box-5";  
+        "box-5 box-1"
+        "box-2 box-2"
+        "box-3 box-3"
+        "box-4 box-4";  
     } 
 }
 
@@ -1759,10 +1773,10 @@ a .back{
         grid-template-rows: auto; 
         gap: 1rem;
         grid-template-areas: 
+        "box-3 box-3"
+        "box-4 box-4"
         "box-1 box-2"
-        "box-3 box-4"
-        "box-5 box-6"
-        "box-7 box-7";  
+        "box-5 box-6";  
     } 
 }
 
@@ -1776,9 +1790,8 @@ a .back{
         grid-template-areas: 
         "box-1 box-2"
         "box-3 box-3"
-        "box-4 box-5"
-        "box-6 box-6"
-        "box-7 box-7";
+        "box-4 box-4"
+        "box-5 box-6";
     } 
 }
 @media (max-width: 500px) {
@@ -1797,20 +1810,8 @@ a .back{
         "box-6"
         "box-7";
     } 
-} */
-
-
-/* Button Show more ------ */
-/* .btn-show{
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
-.showMore{
-    width: 150px;
-    height: 45px;
-    display: flex;
-} */
+
 
 .collection{
     /* height: 100vh; */
@@ -1902,13 +1903,58 @@ a .back{
     /* padding: .2rem; */
 }
 }
-
+/* Logo Design------------ */
+.collection .logo-ds{
+    height: 300px;
+    width: 300px;
+    background-color: var(--clr-surface-a20);
+    border: .2rem solid rgba(255,255,255,.1);
+    border-radius: 20%;
+    border-bottom: .4rem solid var(--clr-primary-a10);
+    border-top: .4rem solid var(--clr-primary-a10);
+    overflow: hidden;
+    /* padding: .2rem; */
+}
+.logo-ds img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-bottom-left-radius: .6rem;
+    border-bottom-right-radius: .6rem;
+}
+@media (max-width: 950px) {
+    .collection .logo-ds{
+    width: 200px;
+    height: 200px;
+    background-color: var(--clr-surface-a20);
+    border: .2rem solid rgba(255,255,255,.1);
+    border-radius: 20%;
+    border-bottom: .2rem solid var(--clr-primary-a10);
+    border-top: .2rem solid var(--clr-primary-a10);
+    overflow: hidden;
+    /* padding: .2rem; */
+}
+}
+@media (max-width: 768px) {
+    .collection .logo-ds{
+    width: 150px;
+    height: 150px;
+    background-color: var(--clr-surface-a20);
+    border: .2rem solid rgba(255,255,255,.1);
+    border-radius: 20%;
+    border-bottom: .2rem solid var(--clr-primary-a10);
+    border-top: .2rem solid var(--clr-primary-a10);
+    overflow: hidden;
+    /* padding: .2rem; */
+}
+}
+/* Name Card----------------- */
 .collection .n-card{
     width: 400px;
     height: auto;
     background-color: var(--clr-surface-a20);
     border: .2rem solid rgba(255,255,255,.1);
-    border-radius: .5rem;
+    border-radius: .7rem;
     border-bottom: .2rem solid var(--clr-primary-a10);
     border-top: .2rem solid var(--clr-primary-a10);
     overflow: hidden;
