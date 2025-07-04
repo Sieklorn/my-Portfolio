@@ -1660,7 +1660,7 @@ footer{
 }
 @keyframes fadeUp {
     from{
-        opacity: 0;
+        /* opacity: 0; */
         transform: translateY(10px) scale(.8);
     }
     to{
