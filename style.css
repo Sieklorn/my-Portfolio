@@ -840,6 +840,9 @@ a.btn:nth-child(2)::before{
 .progress-line.ai span{
     width: 50%;
 }
+.progress-line.figma span{
+    width: 50%;
+}
 
 .progress-line span::after{
     position: absolute;
@@ -888,6 +891,9 @@ a.btn:nth-child(2)::before{
     content: "50%";
 }
 .progress-line.ai span::after{
+    content: "50%";
+}
+.progress-line.figma span::after{
     content: "50%";
 }
 
